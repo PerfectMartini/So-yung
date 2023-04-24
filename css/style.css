@@ -1,0 +1,81 @@
+/* 전체 페이지 스타일 */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* 헤더 스타일 */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* 메인 내용 스타일 */
+main {
+  margin: 20px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* 푸터 스타일 */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+/* 이미지 회전 애니메이션 */
+.rotating-image {
+    animation: rotation 2s infinite linear;
+}
+
+/* 이미지 떨어지는 애니메이션 */
+.falling-image {
+    animation: falling 3s ease-in-out forwards;
+}
+
+/* 이미지 회전 애니메이션 */
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+/* 이미지 떨어지는 애니메이션 */
+@keyframes falling {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(100%);
+    }
+}
