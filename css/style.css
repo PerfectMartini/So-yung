@@ -50,32 +50,47 @@ footer {
   text-align: center;
 }
 
-/* 이미지 회전 애니메이션 */
-.rotating-image {
-    animation: rotation 2s infinite linear;
-}
-
-/* 이미지 떨어지는 애니메이션 */
 .falling-image {
-    animation: falling 3s ease-in-out forwards;
+  position: relative;
 }
 
-/* 이미지 회전 애니메이션 */
-@keyframes rotation {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(359deg);
-    }
+.falling {
+  animation: falling 5s linear forwards;
+  top: -100px; /* 이미지가 처음에 숨겨져 있는 위치로 설정합니다. */
 }
 
-/* 이미지 떨어지는 애니메이션 */
 @keyframes falling {
-    from {
-        transform: translateY(-100%);
-    }
-    to {
-        transform: translateY(100%);
-    }
+  to {
+    top: calc(100vh - 100px);
+  }
+}
+
+/* 헤더 로고 이미지 */
+header img {
+  height: 50px;
+}
+
+/* 인풋 필드 */
+input[type="text"] {
+  width: 200px;
+  height: 30px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+/* 버튼 */
+button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* 버튼 호버 효과 */
+button:hover {
+  background-color: #666;
 }

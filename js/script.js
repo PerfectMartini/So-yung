@@ -1,25 +1,16 @@
-function addRotatingImage() {
-    // 새로운 이미지 태그를 생성합니다.
-    var image = document.createElement('img');
-    image.src = 'images/image1.jpg';
+// 이미지 경로 배열
+const imagePaths = [
+  "images/image1.png",
+  "images/image2.png",
+];
 
-    // 이미지에 회전 애니메이션을 추가합니다.
-    image.classList.add('rotating-image');
+function displayRandomImage() {
+  const inputText = document.getElementById("input-text").value;
+  const image = document.getElementById("falling-image");
 
-    // 이미지를 웹 페이지에 추가합니다.
-    var main = document.querySelector('main');
-    main.appendChild(image);
-}
+  const randomIndex = Math.floor(Math.random() * imagePaths.length); // 이미지 경로 배열 변수 이름을 수정했습니다.
+  image.src = imagePaths[randomIndex]; // 이미지 경로를 설정합니다.
 
-function addFallingImage() {
-    // 새로운 이미지 태그를 생성합니다.
-    var image = document.createElement('img');
-    image.src = 'images/image1.jpg';
-
-    // 이미지에 떨어지는 애니메이션을 추가합니다.
-    image.classList.add('falling-image');
-
-    // 이미지를 웹 페이지에 추가합니다.
-    var main = document.querySelector('main');
-    main.appendChild(image);
+  image.style.display = "block"; // 이미지를 보이도록 설정합니다.
+  image.classList.add("falling");
 }
